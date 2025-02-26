@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+    wow_classic_server:
+        build: .
+        volumes:
+            - databasevol:/var/lib/mysql
+        ports:
+            - 3724:3724
+            - 8085:8085
+volumes:
+    databasevol:
